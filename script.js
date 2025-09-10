@@ -16,7 +16,7 @@ async function fetchRecipes(query) {
   } catch (error) {
     recipesDiv.innerHTML = `<p style="color:red;">${error.message}</p>`;
   }
-}
+} 
 
 // Display recipes in cards
 function displayRecipes(meals) {
@@ -29,9 +29,9 @@ function displayRecipes(meals) {
 
   meals.forEach(meal => {
     const card = document.createElement("div");
-    card.classList.add("recipe-card");
+    card.classList.add("recipe-card"); 
 
-    card.innerHTML = `
+    card.innerHTML = ` 
       <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
       <h3>${meal.strMeal}</h3>
       <p><strong>Category:</strong> ${meal.strCategory}</p>
@@ -41,7 +41,7 @@ function displayRecipes(meals) {
 
     recipesDiv.appendChild(card);
   });
-}
+} 
 
 // Event listener
 searchBtn.addEventListener("click", () => {
